@@ -100,7 +100,7 @@ function normalizeImageUrl(url) {
   }
   const driveFileId = url.match(/\/d\/([a-zA-Z0-9_-]+)\//)?.[1] || url.match(/[?&]id=([a-zA-Z0-9_-]+)/)?.[1];
   if (driveFileId) {
-    return `https://drive.google.com/uc?export=view&id=${driveFileId}`;
+    return `https://lh3.googleusercontent.com/d/${driveFileId}`;
   }
   return url;
 }
