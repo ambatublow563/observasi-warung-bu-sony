@@ -1,0 +1,178 @@
+﻿html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#mitraList > article:hover,
+#productList > article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#mitraList > article,
+#productList > article {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#productDetail img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+}
+
+.product-card-active {
+  border-color: #00AA13;
+  box-shadow: 0 20px 45px rgba(0, 170, 19, 0.15);
+}
+
+/* Gojek-inspired styles */
+.gojek-green {
+  background-color: #00AA13;
+}
+
+.gojek-green:hover {
+  background-color: #009911;
+}
+
+.gojek-light-green {
+  background-color: #e8f5e8;
+}
+
+.gojek-text-green {
+  color: #00AA13;
+}
+
+.gojek-border-green {
+  border-color: #00AA13;
+}
+
+/* Dynamic Gradient Animations */
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  }
+  25% {
+    background: linear-gradient(45deg, #8b5cf6 0%, #a855f7 100%);
+  }
+  50% {
+    background: linear-gradient(45deg, #7c3aed 0%, #8b5cf6 100%);
+  }
+  75% {
+    background: linear-gradient(45deg, #6d28d9 0%, #7c3aed 100%);
+  }
+  100% {
+    background: linear-gradient(45deg, #5b21b6 0%, #6d28d9 100%);
+  }
+}
+
+@keyframes gradientShiftReverse {
+  0% {
+    background: linear-gradient(-45deg, #667eea 0%, #764ba2 100%);
+  }
+  25% {
+    background: linear-gradient(-45deg, #8b5cf6 0%, #a855f7 100%);
+  }
+  50% {
+    background: linear-gradient(-45deg, #7c3aed 0%, #8b5cf6 100%);
+  }
+  75% {
+    background: linear-gradient(-45deg, #6d28d9 0%, #7c3aed 100%);
+  }
+  100% {
+    background: linear-gradient(-45deg, #5b21b6 0%, #6d28d9 100%);
+  }
+}
+
+@keyframes rainbowGradient {
+  0% {
+    background: linear-gradient(45deg, #667eea, #764ba2, #8b5cf6, #a855f7, #7c3aed, #6d28d9, #5b21b6);
+  }
+  14% {
+    background: linear-gradient(45deg, #764ba2, #8b5cf6, #a855f7, #7c3aed, #6d28d9, #5b21b6, #667eea);
+  }
+  28% {
+    background: linear-gradient(45deg, #8b5cf6, #a855f7, #7c3aed, #6d28d9, #5b21b6, #667eea, #764ba2);
+  }
+  42% {
+    background: linear-gradient(45deg, #a855f7, #7c3aed, #6d28d9, #5b21b6, #667eea, #764ba2, #8b5cf6);
+  }
+  57% {
+    background: linear-gradient(45deg, #7c3aed, #6d28d9, #5b21b6, #667eea, #764ba2, #8b5cf6, #a855f7);
+  }
+  71% {
+    background: linear-gradient(45deg, #6d28d9, #5b21b6, #667eea, #764ba2, #8b5cf6, #a855f7, #7c3aed);
+  }
+  85% {
+    background: linear-gradient(45deg, #5b21b6, #667eea, #764ba2, #8b5cf6, #a855f7, #7c3aed, #6d28d9);
+  }
+  100% {
+    background: linear-gradient(45deg, #667eea, #764ba2, #8b5cf6, #a855f7, #7c3aed, #6d28d9, #5b21b6);
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(45deg, #8b5cf6 0%, #ffffff 100%);
+  background-size: 400% 400%;
+}
+
+.gradient-bg-reverse {
+  background: linear-gradient(-45deg, #667eea 0%, #764ba2 100%);
+  background-size: 400% 400%;
+}
+
+.rainbow-bg {
+  background: linear-gradient(45deg, #667eea, #764ba2, #8b5cf6, #a855f7, #7c3aed, #6d28d9, #5b21b6);
+  background-size: 400% 400%;
+}
+
+/* Special gradient for borders */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  padding: 2px;
+  border-radius: 12px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: white;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.gradient-border > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(45deg, #667eea, #764ba2, #8b5cf6, #a855f7);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Product card enhancements */
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+@media (max-width: 768px) {
+  #productDetail img {
+    max-height: 220px;
+  }
+}
